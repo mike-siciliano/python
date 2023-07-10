@@ -30,4 +30,7 @@ if __name__ == '__main__':
     nums2 = [2,3,6,15]
 
     soulution = Solution()
-    print(soulution.findMedianSortedArrays(nums1, nums2))
+    print(f'findMedianSortedArrays:')
+    print(f'Input: {nums1}  {nums2}')
+    print(f'Answer: {soulution.findMedianSortedArrays(nums1, nums2)}')
+    
