@@ -10,18 +10,20 @@ from typing import List
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
       
-        nums1.extend(nums2)
-        nums1.sort()
-        array_length = len(nums1)
+        test_array = nums1[:]
+        test_array.extend(nums2)
+        test_array.sort()
+        
+        array_length = len(test_array)
       
         if array_length % 2 == 0:
             # array is even 
             midpoint = array_length // 2 # floor division
-            value = (nums1[midpoint - 1] + nums1[midpoint]) / 2 # average of values
+            value = (test_array[midpoint - 1] + test_array[midpoint]) / 2 # average of values
             return value
         else: 
             # array is odd 
-            value =  nums1[(array_length // 2)] # floor division 
+            value =  test_array[(array_length // 2)] # floor division 
             return value
 
 # Driver code
